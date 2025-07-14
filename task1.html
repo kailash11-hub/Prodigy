@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Prodigy - Top Nav Scroll</title>
+  <style>
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      background-image: linear-gradient(to left,pink,rgb(162, 187, 231));
+    }
+
+    /* Navigation Bar */
+    nav {
+      width: 100%;
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #000000;
+      color: white;
+      padding: 15px 30px;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      z-index: 1000;
+      transition: background-color 0.3s ease;
+    }
+
+    nav.scrolled {
+      background-color: #523157;
+      box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+      transition: background-color 0.3s ease;
+    }
+
+    .logo {
+      font-size: 22px;
+      font-weight: bold;
+      color: #ffd700;
+    }
+
+    .menu {
+      display: flex;
+      gap: 20px;
+    }
+
+    .menu a {
+      text-decoration: none;
+      color: white;
+      font-size: 16px;
+      transition: color 0.2s ease;
+    }
+
+    .menu a:hover {
+      color: #ff0000;
+    }
+
+    /* Main content */
+    .content {
+      padding-top: 100px;
+      max-width: 900px;
+      margin: auto;
+    }
+
+    h1 {
+      text-align: center;
+      color: #6a00ff;
+      margin-bottom: 20px;
+    }
+
+    p {
+      font-size: 18px;
+      line-height: 1.7;
+      margin-bottom: 20px;
+      color: #333;
+    }
+
+    footer {
+      text-align: center;
+      margin-top: 50px;
+      color: #888;
+      background-color: black;
+    }
+  </style>
+</head>
+<body>
+
+  <nav id="navbar">
+    <div class="logo"><a href="https://prodigyinfotech.dev/"><img src="logo.svg"></a></div>
+    <div class="menu">
+      <a href="Task1.html">Home</a>
+      <a href="about.html" target="_blank">About</a>
+      <a href="service.html" target="_blank">Services</a>
+      <a href="contact.html" target="_blank">Contact</a>
+    </div>
+  </nav>
+
+  <div class="content">
+    <h1>Welcome to Prodigy Infotech</h1>
+    <p>
+      Our mission is to create innovative and accessible learning solutions that empower people of all ages and backgrounds to achieve their full potential. Whether you're a student looking to improve your grades, a professional seeking to upskill, or an organization looking to enhance employee training, we have the tools and resources you need to succeed.
+    </p>
+    <p>
+      If you're looking for an innovative and dynamic learning experience that will help you achieve your goals and unlock your full potential, we invite you to join us on this exciting journey. Together, we can transform the way we learn and create a better future for all.
+    </p>
+
+    <p style="text-align:center; color:red; margin-top:50px;">Keep scrolling to see the menu color change...</p>
+    <div style="height: 1200px;"></div>
+  </div>
+
+  <footer>
+    &copy; 2025 SkillCraft Technology | All Rights Reserved
+  </footer>
+
+  <script>
+    window.addEventListener('scroll', function () {
+      const navbar = document.getElementById('navbar');
+      if (window.scrollY > 50) {
+        navbar.classList.add('scrolled');
+      } else {
+        navbar.classList.remove('scrolled');
+      }
+    });
+  </script>
+</body>
+</html>
